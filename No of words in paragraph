@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char paragraph[200];
+
+    printf("Enter a paragraph: ");
+    fgets(paragraph, sizeof(paragraph), stdin);
+
+    // Remove the newline character at the end
+    paragraph[strcspn(paragraph, "\n")] = 0;
+
+    int c = 1; // Initialize word count to 1
+
+    for (int i = 0; i < strlen(paragraph) - 1; i++) {
+        if (paragraph[i] == ' ' && paragraph[i + 1] != ' ') {
+            c++;
+        }
+    }
+
+    printf("The number of words is %d\n", c);
+
+    return 0;
+}
