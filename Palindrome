@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char a[20];
+    printf("enter any string");
+    scanf("%s",&a);
+    int l=strlen(a);
+    for(i=0;j=l-i;i<j;i++;j--)
+    {
+        if(a[i]!=a[j])
+        {
+            printf("not palidrome");
+            return 0;
+        }
+    }
+    printf("palindrome ");
+}
