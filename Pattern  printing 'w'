@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[10][10];
+
+    // Initialize the array with spaces
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            a[i][j] = ' ';
+        }
+    }
+
+    // Draw 'W' pattern
+    for(int i = 0; i < 10; i++) {
+        a[i][0] = '*';               
+        a[i][9] = '*';               
+        if(i >= 5) {
+            a[i][i] = '*'; 
+            a[i][9 - i] = '*';
+        }
+    }
+
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            printf("%c", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+
+
+
+
+}
