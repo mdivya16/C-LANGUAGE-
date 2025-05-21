@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<string.h>
+float cal(int marks[5])
+{
+    int sum=0;
+    for(int i=0;i<5;i++)
+    {
+        sum=sum+marks[i];
+    }
+    return sum/5;
+}
+ void sorting(float percen[5],char names[5][20])
+ {
+ float temp;
+ char temp[20];
+ for(int i=0;i<4;i++)
+ {
+     for(int j=i+1;j<5;j++)
+     {
+         if(persen[i]<percen[j])
+         {
+             temp=percen[i];
+             percen[i]=percen[j];
+             percen[j]=temp;
+             strcpy(temp 1,names[i]);
+             strcpy(names[i],names[j]);
+             strcpy(nmaes[j],temp 1);
+         }
+     }
+ }
+
+}
+void main()
+{
+    int marks[5][5]={10,35,56,76,87},
+                    {56,78,45,67,23},
+                    {76,54,34,35,23},
+                    {10,20,30,40,50},
+                    {23,43,76,13,45};
+    char names[5][20]={"DIVYA","GOWTHAMI","BHARATHI","PRIYA","SWAPNA"};
+    float percen[5];
+    fo(int i=0;i<5;i++)
+    {
+     percen[i]=cal(marks[i]);
+    }
+    sorting(percen,names);
+    for(int i=0;i<5;i++)
+    {
+        printf("/nrank %d is mr/ms %s-> scored %f",i+1, names[i],percen[i]);
+    }
+    
+}
